@@ -4,25 +4,58 @@
     <meta charset="UTF-8">
     <title>المتجر - جيم ماستر</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
+    
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-secondary mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">GYM MASTER</a>
+            <a href="index.html" class="btn btn-outline-light btn-sm">رجوع للرئيسية</a>
+        </div>
+    </nav>
+
     <div class="container mt-5">
-        <h2 class="mb-4 text-center">متجر المكملات الغذائية</h2>
+        <h2 class="mb-5 text-center fw-bold text-warning">متجر المكملات الغذائية</h2>
         <div class="row g-4">
+            
             <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="c:\Users\MATRIX\Desktop\5935903231714200549_121.jpg" class="card-img-top" alt="Product">
-                    <div class="card-body">
-                        <h5 class="card-title">واي بروتين (Whey Protein)</h5>
-                        <p class="card-text">بروتين عالي الجودة لبناء العضلات.</p>
-                        <h4 class="text-primary">1500 ج.م</h4>
-                        <a href="" class="btn btn-success w-100 mt-3">اطلب عبر واتساب</a>
+                <div class="card h-100 product-card shadow-sm">
+                    <img src="https://m.media-amazon.com/images/I/716uI8DkuDL._AC_SX679_.jpg" class="card-img-top" alt="Whey Protein">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">واي بروتين (Whey Protein)</h5>
+                        <p class="card-text text-muted">بروتين عالي الجودة وسريع الامتصاص لبناء العضلات الصافية.</p>
+                        <div class="mt-auto">
+                            <h4 class="text-primary mb-3">1500 ج.م</h4>
+                            <a href="#" class="btn btn-success w-100 fw-bold">
+                                اطلب عبر واتساب 
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20" style="background:none;">
+                            </a>
+                        </div>
                     </div>
-                   </div>
                 </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 product-card shadow-sm">
+                    <img src="https://m.media-amazon.com/images/I/81P7+a+1C3L._AC_SX679_.jpg" class="card-img-top" alt="Creatine">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">كرياتين (Creatine)</h5>
+                        <p class="card-text text-muted">لزيادة القوة والتحمل العضلي أثناء التمرين.</p>
+                        <div class="mt-auto">
+                            <h4 class="text-primary mb-3">800 ج.م</h4>
+                            <a href="#" class="btn btn-success w-100 fw-bold">اطلب عبر واتساب</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+        </div>
     </div>
+
+    <footer class="text-center mt-5 py-4 text-muted">
+        &copy; 2024 جميع الحقوق محفوظة لـ Gym Master
+    </footer>
+
 </body>
 </html>
