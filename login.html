@@ -2,21 +2,27 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>تسجيل الدخول</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول - Gym Master</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="login-body">
 
   <div class="login-container">
+    <div style="font-size: 50px; margin-bottom: 20px; color: #e74c3c;">
+        <i class="fa-solid fa-dumbbell"></i>
+    </div>
     <h2>تسجيل الدخول</h2>
+    <p style="color: #aaa; margin-bottom: 20px;">يرجى إدخال بيانات حسابك للمتابعة</p>
 
     <input type="text" id="username" placeholder="اسم المستخدم">
     <input type="password" id="password" placeholder="كلمة المرور">
 
-    <button onclick="login()">دخول</button>
+    <button onclick="login()">دخول <i class="fa-solid fa-arrow-left" style="margin-right: 5px;"></i></button>
     <p id="error"></p>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
