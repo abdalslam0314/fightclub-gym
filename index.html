@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" data-bs-theme="dark">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fight Club Gym</title>
+    <title>الرئيسية - Gym Master</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="visme_d"
-         data-title="webinar Registration Form"
-         data-url="g7ddqxx2-untitled-project?
-         fullpage=true"
-         data-domain="forms"
-         data-full_page="true"
-         data-min-height="100vh"
-         data-form-id="133190">
-        </div>
 
-    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-secondary" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">GYM MASTER</a>
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fa-solid fa-dumbbell"></i> GYM MASTER
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
                     <li class="nav-item"><a class="nav-link" href="shop.html">المتجر</a></li>
                     <li class="nav-item"><a class="nav-link" href="calculator.html">حاسبة السعرات</a></li>
-                    <li class="nav-item"><button class="btn btn-outline-light ms-lg-3" onclick="toggleMode()">تبديل المظهر ☀️/🌙</button></li>
+                    <li class="nav-item mx-2">
+                        <button class="btn btn-sm btn-outline-warning" onclick="toggleMode()">
+                            <i class="fa-solid fa-moon"></i> / <i class="fa-solid fa-sun"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm btn-danger" onclick="logout()">خروج</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -38,41 +38,51 @@
 
     <header class="hero-section text-center py-5">
         <div class="container">
-            <h1 class="display-3 fw-bold text-primary"> FIght Club Gym</h1>
-            <p class="lead">Boxing | MMA | Wrestling | Calisthenics</p>
-            <div class="mt-4">
-                <a href="shop.html" class="btn btn-primary btn-lg px-5">تصفح المكملات</a>
-                <a href="calculator.html" class="btn btn-outline-light btn-lg px-5">احسب سعراتك</a>
+            <h1 class="display-3 fw-bold text-primary mb-3">FIGHT CLUB GYM</h1>
+            <p class="lead mb-4">ملاكمة | فنون قتالية | كمال أجسام | لياقة بدنية</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="shop.html" class="btn btn-primary btn-lg px-5">تصفح المتجر <i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="calculator.html" class="btn btn-outline-light btn-lg px-5">احسب احتياجك <i class="fa-solid fa-calculator"></i></a>
             </div>
         </div>
     </header>
 
-    <section class="services">
+    <section class="container">
+        <h2 class="text-center mt-5 mb-4 text-warning">البرامج التدريبية</h2>
+        <div class="services">
+            <div class="card">
+                <i class="fa-solid fa-hand-fist fa-3x text-danger mb-3"></i>
+                <h3>Boxing</h3>
+                <p>تدريب ملاكمة احترافي</p>
+            </div>
 
-  <a href="pages/boxing.html" class="card">
-    <h3>Boxing</h3>
-    <p>تدريب ملاكمة احترافي</p>
-  </a>
+            <div class="card">
+                <i class="fa-solid fa-users fa-3x text-primary mb-3"></i>
+                <h3>MMA</h3>
+                <p>فنون قتالية مختلطة</p>
+            </div>
 
-  <a href="pages/mma.html" class="card">
-    <h3>MMA</h3>
-    <p>فنون قتالية مختلطة</p>
-  </a>
+            <div class="card">
+                <i class="fa-solid fa-heart-pulse fa-3x text-success mb-3"></i>
+                <h3>Fitness</h3>
+                <p>لياقة بدنية وصحة</p>
+            </div>
 
-  <a href="pages/fitness.html" class="card">
-    <h3>Fitness</h3>
-    <p>لياقة بدنية وصحة</p>
-  </a>
-
-  <a href="pages/calisthenics.html" class="card">
-    <h3>Calisthenics</h3>
-    <p>تدريب وزن الجسم</p>
-  </a>
-
+            <div class="card">
+                <i class="fa-solid fa-person-running fa-3x text-info mb-3"></i>
+                <h3>Calisthenics</h3>
+                <p>تدريب بوزن الجسم</p>
+            </div>
+        </div>
     </section>
 
-
+    <script src="main.js"></script>
     <script>
+        // التحقق من تسجيل الدخول (حماية بسيطة)
+        if (!sessionStorage.getItem("isLoggedIn")) {
+           // window.location.href = "login.html"; // قم بإزالة التعليق لتفعيل الحماية
+        }
+
         function toggleMode() {
             const html = document.documentElement;
             const currentTheme = html.getAttribute('data-bs-theme');
